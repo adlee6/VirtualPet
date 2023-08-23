@@ -5,7 +5,7 @@ void setup()
 void draw()
 {
   background(220);
-  //Body outline
+  //Body base
   fill(102,133,198);
   noStroke();
   ellipse(175,200,160,140);
@@ -19,7 +19,7 @@ void draw()
   curveVertex(280,220);
   curveVertex(280,220);
   endShape(CLOSE);
-  triangle(280,220,230,250,250,200);
+  triangle(280,220,230,250,251,198);
   //Eyes
   fill(0,0,0);
   ellipse(118,200,15,15);
@@ -68,8 +68,23 @@ void draw()
   curveVertex(113,245);
   curveVertex(113,245);
   endShape(CLOSE);
+  //tail
+  beginShape();
+  noStroke();
+  curveVertex(268,218);
+  curveVertex(268,218);
+  curveVertex(278,195);
+  curveVertex(294,190);
+  curveVertex(298,198);
+  curveVertex(294,208);
+  curveVertex(304,205);
+  curveVertex(314,212);
+  curveVertex(310,220);
+  curveVertex(298,224);
+  curveVertex(268,218);
+  curveVertex(268,218);
+  endShape(CLOSE);
  
   fill(0,0,0);
   text("("+mouseX+","+mouseY+")",mouseX,mouseY);
 }
-
