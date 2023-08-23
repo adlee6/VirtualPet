@@ -59,6 +59,7 @@ void draw()
   stroke(0,0,0);
   beginShape();
   curveVertex(113,245);
+  curveVertex(113,245);
   curveVertex(106,258);
   curveVertex(102,267);
   curveVertex(114,268);
