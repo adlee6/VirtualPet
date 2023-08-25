@@ -5,6 +5,7 @@ void setup()
 void draw()
 {
   background(220);
+ 
   //Body base
   fill(102,133,198);
   noStroke();
@@ -12,6 +13,7 @@ void draw()
   triangle(235,190,255,190,280,220);
   beginShape();
   fill(102,133,198);
+  stroke(0,0,0);
   curveVertex(280,220);
   curveVertex(280,220);
   curveVertex(243,245);
@@ -19,7 +21,33 @@ void draw()
   curveVertex(280,220);
   curveVertex(280,220);
   endShape(CLOSE);
-  triangle(280,220,230,250,251,198);
+ 
+  //Belly inside
+  fill(265,265,265);
+  noStroke();
+  beginShape();
+  curveVertex(126,227);
+  curveVertex(126,227);
+  curveVertex(120,250);
+  curveVertex(147,267);
+  curveVertex(185,268);
+  curveVertex(182,244);
+  curveVertex(169,226);
+  curveVertex(147,230);
+  curveVertex(127,225);
+  curveVertex(127,225);
+  endShape();
+  beginShape();
+  curveVertex(213,254);
+  curveVertex(213,254);
+  curveVertex(225,255);
+  curveVertex(235,251);
+  curveVertex(217,260);
+  curveVertex(213,254);
+  curveVertex(213,254);
+  endShape();
+ 
+ 
   //Eyes
   fill(0,0,0);
   ellipse(118,200,15,15);
@@ -28,11 +56,14 @@ void draw()
   noFill();
   stroke(0,0,0);
   arc(157,208,52,26,PI/12,22*PI/24);
+ 
   //Belly
+  fill(265,265,265);
   rotate(PI/24);
   stroke(255,255,255);
   arc(168,212,15,30,6*PI/10,14*PI/10);
   line(206,192,222,208);
+ 
   //fin
   stroke(0,0,0);
   fill(102,133,198);
@@ -68,23 +99,32 @@ void draw()
   curveVertex(113,245);
   curveVertex(113,245);
   endShape(CLOSE);
+ 
   //tail
   beginShape();
-  noStroke();
+  stroke(0,0,0);
   curveVertex(268,218);
   curveVertex(268,218);
   curveVertex(278,195);
   curveVertex(294,190);
   curveVertex(298,198);
   curveVertex(294,208);
-  curveVertex(304,205);
+  curveVertex(302,204);
+  curveVertex(310,205);
   curveVertex(314,212);
   curveVertex(310,220);
   curveVertex(298,224);
   curveVertex(268,218);
   curveVertex(268,218);
   endShape(CLOSE);
- 
-  fill(0,0,0);
-  text("("+mouseX+","+mouseY+")",mouseX,mouseY);
+  
+  //outline
+  noStroke();
+  triangle(281,218,226,255,256,195);
+  triangle(228,246,221,256,227,256);
+  stroke(0,0,0);
+  noFill();
+  arc(175,200,160,140,11*PI/24,47*PI/24);
+  line(255,192,270,208);
+  line(215,263,230,252);
 }
